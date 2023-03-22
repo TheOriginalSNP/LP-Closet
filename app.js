@@ -7,6 +7,7 @@ const _ = require("lodash");
 const ejs = require("ejs");
 const express = require("express");
 const app = express();
+const https = require("https");
 
 const heroTitle = "Check out our new Summer Collection";
 const heroMessage = "Get your furry friend ready for summer! Check out our new Summer Selection of stylish dog clothes and accessories today. From cooling vests to trendy bandanas, we've got everything you need to keep your pup looking and feeling great all season long. Shop now and treat your pup to the best summer yet!";
@@ -44,6 +45,6 @@ app.post("/", function (req, res) {
 
 });
 
-app.listen(3000, function () {
-    console.log("Server 3000 up and running!");
+app.listen(process.env.PORT || 3000, function () {
+    console.log("Sever 3000 up and running!");
 });

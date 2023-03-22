@@ -1,60 +1,78 @@
 #hero {
   color: white;
   background-image: url("/images/hero.png");
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
-.b-example-divider {
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-}
-
-.bi {
-  vertical-align: -.125em;
-  fill: currentColor;
-}
-
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
-}
-
-.nav-scroller .nav {
+  height: 80vh;
   display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  background-size: cover;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero-content {
+  margin-left: 100px;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#hero button {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 100px;
+  margin-bottom: 60px;
+}
+
+
+.featured-cards {
+  padding-top: 30px;
 }
 
 .card {
-  height: 500px;
+  color:white;
+  height: 600px;
   width: 100%;
+}
+
+.card-body {
+  position: relative;
+  padding-bottom: 70px;
+  background-size: cover;
+  background-position: center;
+}
+.card-title {
+  position: absolute;
+  bottom: 70px;
+  left: 30px;
+}
+.card-tag {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.btn {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 }
