@@ -30,14 +30,24 @@ const featuredCardSchema = new mongoose.Schema({
     image: String
 });
 
+const topCategoryCardSchema = new mongoose.Schema({
+    category: String,
+    tag: String,
+    image: String
+});
+
 const Card = mongoose.model("Card", featuredCardSchema, "FeaturedCards");
+
+const TcCard = mongoose.model("TcCard", topCategoryCardSchema, "TopCategoryCards");
 
 app.get('/', async (req, res) => {
     const cards = await Card.find().limit(4);
+    const tcCards = await TcCard.find().limit(6);
     res.render("home", {
         content: heroTitle,
         message: heroMessage,
-        cards: cards
+        cards: cards,
+        tcCards: tcCards
     });
 });
 

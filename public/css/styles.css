@@ -76,3 +76,13 @@
   bottom: 30px;
   left: 30px;
 }
+
+.divider {
+  height: 150px;
+  background-image: url("/public/images/Divider\ Icons.png");
+  background-color: #7A2266;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
