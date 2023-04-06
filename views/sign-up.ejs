@@ -1,0 +1,37 @@
+
+<%- include("partials/sections/header"); -%>
+    
+<main class="form-signin w-25 m-auto">
+    <form onsubmit="return validateForm()" id="signupForm" method="post" action="/sign-up">
+      <img class="mb-4" src="/public/images/Logo-Header.png" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingFirstName" name= "firstName" placeholder="First Name" required>
+        <label for="floatingFirstName">First Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingLastName" name= "lastName" placeholder="Last Name" required>
+        <label for="floatingLastName">Last Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" name= "email" placeholder="name@example.com" required>
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingPassword" name= "password" placeholder="Password" required>
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password" required>
+        <label for="floatingConfirmPassword">Confirm Password</label>
+      </div>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="subscribe-newsletter" name="newsletter"> Subscribe to newsletter
+        </label>
+      </div>
+      <button class="w-25 btn btn-lg btn-primary" type="submit">Sign up</button>
+    </form>
+  </main>
+
+<%- include("partials/sections/footer"); -%>
